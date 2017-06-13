@@ -234,6 +234,7 @@ art_non_debug_cflags := \
 # Cflags for debug ART and ART tools.
 art_debug_cflags := \
   -O2 \
+  $(ART_NDEBUG_OPT_FLAG) \
   -DDYNAMIC_ANNOTATIONS_ENABLED=1 \
   -DVIXL_DEBUG \
   -UNDEBUG

@@ -342,6 +342,8 @@ ifeq ($(MALLOC_IMPL),dlmalloc)
 else
   LIBART_CFLAGS += -DUSE_JEMALLOC
 endif
+LIBART_TARGET_CFLAGS := -O3
+LIBART_HOST_CFLAGS :=
 
 # Default dex2oat instruction set features.
 LIBART_HOST_DEFAULT_INSTRUCTION_SET_FEATURES := default
