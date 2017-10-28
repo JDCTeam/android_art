@@ -82,7 +82,7 @@ func globalFlags(ctx android.BaseContext) ([]string, []string) {
 func debugFlags(ctx android.BaseContext) []string {
 	var cflags []string
 
-	opt := envDefault(ctx, "ART_DEBUG_OPT_FLAG", "-O2")
+	opt := envDefault(ctx, "ART_DEBUG_OPT_FLAG", "-O3")
 	cflags = append(cflags, opt)
 
 	return cflags
