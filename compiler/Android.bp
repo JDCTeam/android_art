@@ -22,7 +22,6 @@
 art_cc_defaults {
     name: "libart-compiler-defaults",
     defaults: ["art_defaults"],
-    cflags: ["-O3"],
     host_supported: true,
     srcs: [
         "compiled_method.cc",
@@ -219,7 +218,6 @@ gensrcs {
 
 art_cc_library {
     name: "libart-compiler",
-    cflags: ["-O3"],
     defaults: [
         "libart-compiler-defaults",
         "dex2oat-pgo-defaults",
@@ -268,7 +266,6 @@ art_cc_library {
 
 art_cc_library {
     name: "libartd-compiler",
-    cflags: ["-O3"],
     defaults: [
         "art_debug_defaults",
         "libart-compiler-defaults",
@@ -309,7 +306,6 @@ art_cc_library {
 
 art_cc_library {
     name: "libart-compiler-gtest",
-    cflags: ["-O3"],
     defaults: ["libart-gtest-defaults"],
     srcs: ["common_compiler_test.cc"],
     shared_libs: [
@@ -322,7 +318,6 @@ art_cc_library {
 
 art_cc_test {
     name: "art_compiler_tests",
-    cflags: ["-O3"],
     defaults: [
         "art_gtest_defaults",
     ],
@@ -450,7 +445,6 @@ art_cc_test {
 
 art_cc_test {
     name: "art_compiler_host_tests",
-    cflags: ["-O3"],
     device_supported: false,
     defaults: [
         "art_gtest_defaults",
